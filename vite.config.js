@@ -14,5 +14,6 @@ export default defineConfig({
       }
     },
     host: true
-  }
+  },
+  base: process.env.VITE_BASE_PATH || "/react-garnatronikOS-portfolio"
 })

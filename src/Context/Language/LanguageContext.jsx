@@ -220,7 +220,7 @@ const langTranslations = {
                                 <span class="span-nosignal-lower-hidden span-nosignal-transmit"><strong>└────────────────────┘</strong></span>
                             </div>
                             <div class="div-content-message">
-                                <span class="span-content">>Objective: Showing Fullstac skills</span>
+                                <span class="span-content">>Objective: Showing Fullstack skills</span>
                                 <span class="span-content">>The sender of this signal specializes in Fullstack development and scalable environments.</span>
                                 <span class="span-content-subject">>Subject's identity: <strong class="strong-restricted" data-text="[RESTRICTED]">[RESTRICTED]</strong></span>
                                 <span class="span-content">>To find out the identity, go to the "About.log" section.</span>

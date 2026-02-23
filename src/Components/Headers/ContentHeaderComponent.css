@@ -1,0 +1,456 @@
+.div-border-content-main-header {
+    display: flex;
+    margin: 15px;
+    border: 2px solid aqua;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: auto;
+    height: 200px;
+    max-height: 200px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.div-menu-trigger {
+    display: none;
+}
+
+.div-menu {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 30px);
+
+    width: 20%;
+    border: 2px solid aqua;
+    border-radius: 10px 0 0 0;
+    margin: 15px;
+}
+
+.div-menu-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    background-color: darkslategrey;
+    background: linear-gradient(rgba(9, 188, 201, 0.473) 50%, rgba(54, 70, 70, 0) 50%);
+    background-size: 100% 4px;
+    border-radius: 10px 0 0 0;
+}
+
+.div-menu-items {
+    display: flex;
+    overflow-y: auto;
+    scrollbar-width: none;
+    border-top: 2px solid aqua;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+}
+
+.menu-item {
+    position: relative;
+
+    color: aqua;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.menu-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+}
+
+.menu-item:hover::before {
+    width: 100%;
+    height: 100%;
+    border: 1px solid aqua;
+    box-shadow: 0 0 10px aqua, inset 0 0 5px aqua;
+    transition: width 0.2s ease, height 0.2s ease 0.2s;
+}
+
+.menu-item:hover::after {
+    animation: blink 0.8s infinite;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: relative;
+}
+
+li {
+    list-style-type: none;
+    border-left: 2px solid aqua;
+    margin-left: 1em;
+}
+
+li div {
+    padding-left: 1em;
+    position: relative;
+}
+
+li div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -2px;
+    bottom: 50%;
+    width: 0.75em;
+    border: 2px solid aqua;
+    border-top: 0 none transparent;
+    border-right: 0 none transparent;
+}
+
+ul>li:last-child {
+    border-left: 2px solid transparent;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.div-time {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 30px);
+    width: 20%;
+    border: 2px solid aqua;
+    border-radius: 0 10px 0 0;
+    margin: 15px;
+}
+
+.ulProjsNon {
+    display: none;
+}
+
+.ulProjsVis {
+    display: block;
+}
+
+.div-app-title {
+    width: calc(58% - 10px);
+    border: 2px solid aqua;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 0px;
+    height: calc(100% - 30px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.div-title {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    color: aqua;
+}
+
+.div-chilito {
+    color: hotpink;
+    filter: drop-shadow(0px 0px 8px rgba(255, 20, 147, 0.9));
+}
+
+.faChilito {
+    font-size: 75px;
+}
+
+.div-caption-title {
+    white-space: pre;
+    font-size: clamp(0.20rem, 0.75vw, 1rem);
+    color: aqua;
+}
+
+.div-subtitle {
+    display: flex;
+    justify-content: left;
+    height: 20%;
+    color: aqua;
+    text-shadow: 0 0 5px aqua;
+    margin-top: 7px;
+}
+
+@media (max-width:1150px) {
+    .div-border-content-main-header {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+
+    }
+
+    .div-menu {
+        height: 10%;
+        margin: 10px;
+    }
+
+    .div-app-title {
+        display: flex;
+        color: aqua;
+
+        align-items: center;
+        justify-content: center;
+        margin-left: 15px;
+        margin-right: 15px;
+        width: calc(100% - 30px);
+        border-radius: 0px;
+        border: 2px solid aqua;
+        cursor: help;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .div-title {
+        margin-top: 5px;
+        height: 60%;
+    }
+
+    .div-subtitle {
+        height: 40%;
+        margin-top: 5px;
+    }
+
+    .faChilito {
+        font-size: 35px;
+
+    }
+
+    .div-time {
+        margin: 15px 15px 0 15px;
+        height: 15%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(100% - 30px);
+        border-radius: 10px 10px 0 0;
+
+    }
+
+    .div-clock {
+        border-top-right-radius: none;
+        border-bottom: 0px !important;
+        border-radius: 0 10px 0 0;
+        border-top: 0px !important;
+    }
+
+    .div-content-clock-elements {
+        border-right: 2px solid aqua;
+    }
+
+    .img-clock-matrix,
+    .img-clock-white-noise,
+    .div-clock-scan-lines {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 0;
+        object-fit: cover;
+        border-radius: 0 10px 0 0;
+    }
+
+    .span-clock {
+        font-size: 20px;
+
+    }
+
+    .img-term-ico {
+        height: 20px;
+        border-radius: 10px 0 0 0;
+    }
+
+    .div-menu-trigger {
+        display: flex;
+        color: aqua;
+        text-shadow: 0 0 5px aqua;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px 0 0 0;
+        border: 1px solid aqua;
+        margin: 1px 0 1px 2px;
+        cursor: pointer;
+    }
+
+    .div-menu {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 47%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 140px;
+        max-height: 70vh;
+        z-index: 999;
+        background: rgba(0, 10, 10, 0.95);
+        box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+        backdrop-filter: blur(5px);
+        border-radius: 20px;
+    }
+
+    .div-menu.active {
+        display: flex;
+        animation: crt-popup 0.2s ease-out;
+    }
+
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(4px);
+        z-index: 998;
+        animation: fadeIn 0.3s ease;
+    }
+
+    .div-menu.closing {
+        animation: crt-popdown 0.2s forwards;
+    }
+
+    .div-menu-title {
+        border-radius: 20px 20px 0 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes crt-popup {
+    0% {
+        transform: translate(-50%, -50%) scaleY(0.01) scaleX(0);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scaleY(0.01) scaleX(1);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scaleY(1) scaleX(1);
+    }
+}
+
+@keyframes crt-popdown {
+    0% {
+        transform: translate(-50%, -50%) scaleY(1) scaleX(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scaleY(0.01) scaleX(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scaleY(0.01) scaleX(0.01);
+        opacity: 0;
+    }
+}
+
+.div-clock {
+    position: relative;
+    font-family: 'Digital';
+    font-size: 25px;
+    display: flex;
+    border-top: 2px solid aqua;
+
+    height: 100%;
+    width: 100%;
+
+    align-items: center;
+    justify-content: center;
+    color: aqua;
+    text-shadow:
+        0 0 10px darkturquoise,
+        0 0 15px turquoise,
+        0 0 20px white;
+}
+
+.img-clock-matrix {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: none;
+    opacity: 0.25;
+    z-index: 1;
+}
+
+.img-clock-white-noise {
+    position: absolute;
+    opacity: 0.3;
+    height: 100%;
+    width: 100%;
+    border: none;
+    z-index: 2;
+    filter: sepia(1) hue-rotate(135deg) saturate(10) brightness(5);
+}
+
+.div-clock-scan-lines {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.4) 50%);
+    background-size: 100% 4px;
+    border: none;
+    z-index: 3;
+}
+
+.span-clock {
+    z-index: 4;
+}
+
+.div-content-clock-elements {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.img-github {
+    height: 20px;
+    cursor: pointer;
+    filter: sepia(10) hue-rotate(90deg) saturate(20);
+}
+
+.img-mail {
+    height: 25px;
+    cursor: pointer;
+    filter: sepia(10) hue-rotate(90deg) saturate(20);
+}
+
+.faIcon {
+    height: 20px;
+    cursor: pointer;
+    filter: sepia(10) hue-rotate(90deg) saturate(20);
+}

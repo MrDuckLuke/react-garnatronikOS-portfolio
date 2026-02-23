@@ -1,0 +1,444 @@
+.div-info-file {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 10, 10, 0.4);
+}
+
+.div-terminal-header-top {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid aqua;
+    height: auto;
+}
+
+.div-chilli-tamaltronik-file {
+    display: flex;
+    font-size: 15px;
+}
+
+.xsquareIco {
+    color: hotpink;
+    cursor: pointer;
+}
+
+.chilitoIco {
+    color: hotpink;
+}
+
+.view-viewport {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 2px 0 4px 0;
+}
+
+.div-back {
+    top: 0px;
+    position: absolute;
+    background-color: rgba(3, 35, 36, 0.7);
+    backdrop-filter: blur(2px);
+    height: 35px;
+    width: 100%;
+    z-index: 9;
+}
+
+.div-back-2 {
+    bottom: 0px;
+    position: absolute;
+    background-color: rgba(3, 35, 36, 0.7);
+    backdrop-filter: blur(2px);
+    height: 25px;
+    width: 100%;
+    z-index: 9;
+    border-top: 1px solid aqua;
+}
+
+.span-pages-names {
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 52px);
+    border: 1px solid aqua;
+    border-bottom: 0;
+    height: 25px;
+    width: 105px;
+    text-align: center;
+    align-content: center;
+    border-radius: 5px 5px 0 0;
+    background-color: rgba(0, 255, 255, 0.2);
+    background-image: linear-gradient(#00ffff33, #00000000);
+    backdrop-filter: blur(5px);
+    z-index: 10;
+}
+
+.span-details {
+    position: absolute;
+    bottom: 2px;
+    z-index: 10;
+}
+
+.div-lateral-1 {
+    position: absolute;
+    top: 10px;
+    width: calc(50% - 51px);
+    height: 25px;
+    border-bottom: 1px solid aqua;
+}
+
+.div-lateral-2 {
+    position: absolute;
+    top: 10px;
+    right: 0%;
+    width: calc(50% - 54px);
+    height: 25px;
+    border-bottom: 1px solid aqua;
+}
+
+.float-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: transparent;
+    border: none;
+    color: rgba(0, 255, 255, 0.3);
+    font-size: 2rem;
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px aqua;
+}
+
+.float-nav:hover {
+    color: aqua;
+    text-shadow: 0 0 20px aqua, 0 0 40px aqua;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.float-nav.left {
+    left: 5px;
+}
+
+.float-nav.right {
+    right: 5px;
+}
+
+.horizontal-rail {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.data-section {
+    min-width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    padding-left: 55px;
+    padding-right: 55px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: safe center;
+}
+
+.div-page {
+    font-size: 12px;
+    width: 70%;
+}
+
+.div-exp-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.div-exp-info {
+    width: 80%;
+}
+
+.div-wide {
+    width: 100%;
+}
+
+.div-about-log {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+}
+
+.div-file-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.hr-line-log {
+    width: 100%;
+    color: aqua;
+}
+
+.div-fakeinfo {
+    height: 50px;
+}
+
+.div-about-pics-viewport {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.div-about-pics-rail {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.div-pic-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-btn-pic-nav {
+    margin-top: 100px;
+    height: auto;
+
+}
+
+.btn-pic-nav {
+    transform: translateY(-50%);
+    z-index: 10;
+    background: transparent;
+    border: none;
+    color: hotpink;
+    font-size: 2rem;
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px deeppink;
+}
+
+.btn-pic-nav:disabled {
+    color: #030;
+    border-color: #030;
+    display: none;
+}
+
+.div-about-pics {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 20px;
+    justify-content: center;
+    width: 20%;
+}
+
+.div-img-about {
+    position: relative;
+    border: 1px solid aqua;
+    height: 190px;
+    width: 180px;
+    z-index: 0;
+}
+
+.img-whitenoise-about {
+    filter: grayscale(0) sepia(0.15) hue-rotate(135deg) saturate(10) brightness(1.5);
+    position: absolute;
+    opacity: 0.9;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.img-matrix-about {
+    position: absolute;
+    opacity: 0.35;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.img-hacker-about {
+    position: absolute;
+    opacity: 0.7;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.img-about {
+    opacity: 0.07;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.div-scanlines-about {
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.4) 50%);
+    background-size: 100% 4px;
+    position: absolute;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+}
+
+.span-text-img {
+    position: absolute;
+    z-index: 5;
+    top: 170px;
+    left: 7px;
+    font-size: 14px;
+}
+
+.span-text-border-top {
+    position: absolute;
+    left: 1px;
+    z-index: 5;
+    font-size: 13px;
+}
+
+.span-text-border-bottom {
+    position: absolute;
+    left: 1px;
+    top: 178px;
+    z-index: 5;
+    font-size: 13px;
+}
+
+.div-img-about:hover .img-hacker-about {
+    opacity: 0;
+}
+
+.div-img-about:hover .img-about {
+    opacity: 0.9;
+}
+
+
+.div-used-tech {
+    position: relative;
+    border: 1px solid aqua;
+    border-radius: 5px;
+
+    height: 160px;
+    width: 300px;
+    z-index: 0;
+}
+
+.img-whitenoise {
+    opacity: 0.2;
+    filter: grayscale(0) sepia(1) hue-rotate(135deg) saturate(10) brightness(1.5);
+    position: absolute;
+    top: 26px;
+    width: 100%;
+    height: calc(100% - 26px);
+    border-radius: 5px;
+    z-index: 3;
+}
+
+.div-used-tech:hover .img-whitenoise {
+    opacity: 1;
+    filter: grayscale(0) sepia(1) hue-rotate(135deg) saturate(10) brightness(1.5);
+}
+
+.div-caption-used-tech {
+    position: absolute;
+    border-bottom: 1px solid aqua;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    align-content: center;
+    z-index: 1;
+    background-color: rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.div-used-tech-icons {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 26px);
+    z-index: 2;
+    margin-top: 30px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.div-support {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.div-cap-ssrs {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.div-cap-mvc {
+    font-size: 10px;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+@media (max-width:1025px) {
+    .div-exp-content {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .div-exp-info {
+        width: 100%;
+    }
+
+    .div-file-content {
+        flex-direction: column;
+    }
+
+    .div-used-tech {
+        height: 135px;
+        width: 100%;
+        margin-top: 7px;
+        margin-left: 0;
+        position: relative;
+    }
+
+    .data-section {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .img-whitenoise {
+        position: absolute;
+        width: 100%;
+    }
+
+    .div-about-pics {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+}

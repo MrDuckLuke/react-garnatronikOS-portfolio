@@ -1,0 +1,181 @@
+.div-content-footer {
+    display: flex;
+    margin: 15px;
+    border: 2px solid aqua;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: auto;
+    height: 90px;
+    background-color: 0 5px 15px rgba(7, 136, 125, 0.5), inset 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+
+
+.div-content-footer-elements {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.div-wholeterminal {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    border: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    flex-direction: column;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.4) 50%);
+    background-size: 100% 4px;
+    will-change: background-position, transform, filter;
+    -webkit-animation: Gradient 2s linear infinite;
+    -moz-animation: Gradient 2s linear infinite;
+    animation: Gradient 2s linear infinite;
+    overflow: hidden;
+    height: 100%;
+}
+
+.div-typewriter-effect-console {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid aqua;
+    font-family: 'Consolitas';
+    font-size: clamp(9px, 2.65vw, 20px);
+    color: teal;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.div-span-group {
+    font-size: clamp(8px, 2.65vh, 27px);
+}
+
+.span-root {
+    color: pink;
+    text-shadow:
+        0 0 10px deeppink,
+        0 0 15px deeppink,
+        0 0 20px deeppink;
+}
+
+.span-twopoints {
+    color: white;
+    text-shadow:
+        0 0 10px darkturquoise,
+        0 0 15px darkturquoise,
+        0 0 20px darkturquoise;
+}
+
+.span-swungdash {
+    color: cyan;
+    text-shadow:
+        0 0 10px teal,
+        0 0 15px teal,
+        0 0 20px teal;
+}
+
+.span-changingtext {
+    color: white;
+}
+
+.div-linux-terminal {
+    display: flex;
+    flex-wrap: wrap;
+    height: 40%;
+    border-top: none;
+    max-width: 880px;
+
+
+    align-items: center;
+    padding-left: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    justify-content: center;
+    margin: auto;
+}
+
+.div-linux-whole-terminal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(10px, 2vw, 16px);
+}
+
+.div-root-terminal-hide {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.98);
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 0.4s;
+}
+
+.div-root-terminal-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 0.4s;
+}
+
+.btn-icon-console {
+    height: 25px;
+    cursor: pointer;
+}
+
+.btn-icon-console:hover {
+    filter: drop-shadow(0 0 1px white) drop-shadow(0 0 10px turquoise);
+}
+
+.span-terminal-root {
+    color: deeppink;
+}
+
+.span-terminal-twopoints {
+    color: white;
+}
+
+.span-terminal-swungdash {
+    color: teal;
+}
+
+.text-linux-console {
+    flex: 1;
+    min-width: 200px;
+    border-bottom-right-radius: 10px;
+    background-color: transparent;
+    font-family: 'Consolitas';
+    color: paleturquoise;
+    border-color: transparent;
+    font-size: clamp(10px, 2vw, 16px);
+}
+
+.text-linux-console:focus {
+    outline: none;
+}
+
+.cursor-typing {
+    animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.span-characters-left {
+    font-size: 12px;
+    color: gray;
+    margin-left: 10px;
+}

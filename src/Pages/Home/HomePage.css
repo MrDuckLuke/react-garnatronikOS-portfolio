@@ -1,0 +1,485 @@
+.div-home-receiver {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    margin: auto;
+    width: 90%;
+    font-size: 12px;
+
+    mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            black 20%,
+            black 90%,
+            transparent 100%);
+
+    -webkit-mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            black 20%,
+            black 80%,
+            transparent 100%);
+}
+
+.div-home-receiver::-webkit-scrollbar {
+    display: none;
+}
+
+.p-initial {
+    flex-shrink: 0;
+}
+
+.p-text {
+    margin: 5px 0;
+}
+
+.div-title-message {
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.p-welcome {
+    font-family: 'Dotmatrix';
+    font-size: clamp(30px, 3vw, 40px);
+}
+
+.div-incoming-message {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .div-incoming-message {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .div-content-message {
+        height: auto;
+        min-height: 200px;
+    }
+}
+
+.div-hacker {
+    position: relative;
+    max-width: 150px;
+    border-radius: 5px;
+    border: 2px solid aqua;
+}
+
+
+
+
+.div-hacker:hover {
+    filter: grayscale(0) sepia(1) hue-rotate(135deg) saturate(10) brightness(1.5);
+    cursor: zoom-in;
+}
+
+.div-hacker:hover .img-hacker-hidden,
+.img-matrix-hidden {
+    opacity: 0;
+}
+
+.div-hacker:hover .img-white-noise-hidden {
+    opacity: 0.9;
+}
+
+.div-hacker:hover .span-transmit-hidden {
+    opacity: 0;
+}
+
+.div-hacker:hover .span-nosignal-transmit {
+    opacity: 1;
+}
+
+@keyframes glitch-shake {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(-4px, 2px) scale(1.01);
+    }
+
+    50% {
+        transform: translate(4px, -2px) scale(1.02) skewX(2deg);
+    }
+
+    75% {
+        transform: translate(-2px, -3px) scale(1.01) skewX(-2deg);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+.div-lines-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,
+            #00462db3, #04965eb3,
+            #00462db3, #04965eb3);
+    background-size: 300% 300%;
+    animation: GradientScroll 10s linear infinite;
+    z-index: 1;
+}
+
+@keyframes GradientScroll {
+    0% {
+        background-position: 50% 0%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 50% 0%;
+    }
+}
+
+
+.img-matrix {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+.img-hacker {
+    position: relative;
+    top: 0px;
+    width: 150px;
+    z-index: 3;
+}
+
+.img-white-noise {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.25;
+    height: 100%;
+    width: 150px;
+    border: none;
+    z-index: 4;
+}
+
+.div-scanlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.4) 50%);
+    background-size: 100% 4px;
+    z-index: 5;
+}
+
+.span-transmit {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    color: aquamarine;
+    text-shadow: 0 0 15px lime;
+    z-index: 6;
+}
+
+.span-transmit-lower {
+    position: absolute;
+    top: 162px;
+    left: 3px;
+    color: aquamarine;
+    text-shadow: 0 0 15px lime;
+    z-index: 7;
+}
+
+.strong-dot {
+    color: red;
+}
+
+.span-nosignal-hidden {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 15px gray;
+    z-index: 6;
+    opacity: 0;
+}
+
+.span-nosignal-text-hidden {
+    position: absolute;
+    top: 81px;
+    left: 38px;
+    color: white;
+    background-color: black;
+    z-index: 7;
+    opacity: 0;
+}
+
+.span-nosignal-lower-hidden {
+    position: absolute;
+    top: 162px;
+    left: 3px;
+    color: black;
+    text-shadow: 0 0 15px gray;
+    z-index: 8;
+    opacity: 0;
+}
+
+
+.div-scanner-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 4px;
+    background: rgba(0, 255, 255, 0.7);
+    box-shadow: 0 0 15px 2px rgba(0, 255, 255, 0.8);
+    z-index: 6;
+    opacity: 0.6;
+    animation: scanning 3s ease-in-out infinite;
+}
+
+@keyframes scanning {
+    0% {
+        top: 0%;
+    }
+
+    50% {
+        top: 100%;
+    }
+
+    100% {
+        top: 0%;
+    }
+}
+
+.hr-line {
+    width: 100%;
+    color: aqua;
+}
+
+.strong-eof {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    background-color: #008080;
+    font-size: 12px;
+}
+
+.div-content-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: aqua;
+    height: 150px;
+    margin: 15px;
+    margin-bottom: 0;
+}
+
+.span-content {
+    display: flex;
+    font-family: 'Consolitas';
+    font-size: 11px;
+}
+
+.strong-restricted {
+    font-family: 'Consolitas';
+    font-size: 15px;
+    color: pink;
+    text-shadow:
+        0 0 20px deeppink;
+    position: relative;
+    display: inline-block;
+}
+
+.strong-restricted::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: pink;
+    mix-blend-mode: hard-light;
+    text-shadow: 0 0 10px deeppink;
+    animation: restricted-glitch-1 3.5s infinite;
+}
+
+.error-glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #33ffff;
+    mix-blend-mode: hard-light;
+    text-shadow: 0 0 10px aqua;
+    animation: restricted-glitch-2 5s linear infinite alternate-reverse;
+}
+
+@keyframes restricted-glitch-1 {
+
+    0%,
+    88%,
+    92%,
+    96%,
+    100% {
+        transform: translate(0);
+        clip-path: inset(0 0 0 0);
+        filter: hue-rotate(0deg);
+    }
+
+    91% {
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
+    }
+
+    92% {
+        transform: translate(-5px, 0);
+        clip-path: inset(0 0 50% 0);
+    }
+
+    93% {
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
+    }
+
+    94% {
+        transform: translate(10px, 0);
+        clip-path: inset(20% 0 30% 0);
+    }
+
+    95% {
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
+    }
+
+    96% {
+        transform: translate(-3px, 0);
+        clip-path: inset(70% 0 0 0);
+    }
+
+    97% {
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
+    }
+
+    98% {
+        transform: translate(2px, 0);
+        clip-path: inset(10% 0 80% 0);
+    }
+
+    99% {
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
+    }
+
+    100% {
+        transform: translate(-7px, 0);
+        clip-path: inset(40% 0 40% 0);
+    }
+}
+
+@keyframes restricted-glitch-2 {
+
+    0%,
+    88%,
+    92%,
+    96%,
+    100% {
+        transform: translate(0);
+        clip-path: inset(0 0 0 0);
+        filter: hue-rotate(0deg);
+    }
+
+    91% {
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
+    }
+
+    92% {
+        transform: translate(7px, 0);
+        clip-path: inset(15% 0 65% 0);
+    }
+
+    94% {
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
+    }
+
+    95% {
+        transform: translate(-8px, 0);
+        clip-path: inset(5% 0 90% 0);
+    }
+
+    97% {
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
+    }
+
+    99% {
+        transform: translate(4px, 0);
+        clip-path: inset(25% 0 25% 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+
+
+@keyframes alert-glow {
+
+    0%,
+    40%,
+    60%,
+    100% {
+        text-shadow: 0 0 10px deeppink;
+        filter: brightness(1);
+    }
+
+    50% {
+        text-shadow: 0 0 10px white,
+            0 0 25px deeppink 0 0 40px deeppink;
+        filter: brightness(2);
+        color: white;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .span-content,
+    .span-content-subject {
+        font-size: 13px;
+    }
+
+    .strong-restricted {
+        font-size: 16px;
+    }
+
+    .div-content-message {
+        height: auto;
+        gap: 12px;
+        padding: 20px 0;
+        margin: 5px;
+    }
+}
